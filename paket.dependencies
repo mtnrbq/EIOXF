@@ -1,0 +1,14 @@
+source https://api.nuget.org/v3/index.json
+
+framework: netstandard2.0
+
+nuget FSharp.Core
+nuget Gjallarhorn_mtnrbq 2.0.0-alpha
+nuget Gjallarhorn.Bindable_mtnrbq 2.0.0-alpha
+nuget Gjallarhorn.Bindable.XamarinForms_mtnrbq 2.0.0-alpha
+nuget Xamarin.Android.Support.Design
+nuget Xamarin.Android.Support.v4
+nuget Xamarin.Android.Support.v7.AppCompat 
+nuget Xamarin.Android.Support.v7.CardView
+nuget Xamarin.Android.Support.v7.MediaRouter
+nuget Xamarin.Forms >= 2.5
