@@ -1,26 +1,22 @@
-﻿using System;
-
-using Android.App;
-using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.App;
 using Android.OS;
+using EIO.XF;
+using Gjallarhorn.XamarinForms;
+using Program = EIO.Program;
 
-namespace EIO.Droid
+namespace EIO.Android
 {
-    [Activity(Label = "EIO", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    [Activity(Label = "Elm Inspired One", MainLauncher = true, Icon = "@drawable/icon")]
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+
+            var info = Framework.CreateApplicationInfo(Program.applicationCore, new MainPage());
+            LoadApplication(info.CreateApp());
         }
     }
 }

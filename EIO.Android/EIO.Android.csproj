@@ -38,6 +38,9 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Gjallarhorn.Bindable.XamarinForms">
+      <HintPath>..\packages\Gjallarhorn.Bindable.XamarinForms_mtnrbq\lib\netstandard2.0\Gjallarhorn.Bindable.XamarinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -77,10 +80,6 @@
     <ProjectReference Include="..\EIO.XF\EIO.XF.fsproj">
       <Project>{f9598919-d4ad-4228-a3a2-cc987e8c8dba}</Project>
       <Name>EIO.XF</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EIO\EIO.csproj">
-      <Project>{5401A424-DD50-49EE-BC78-13527F93855B}</Project>
-      <Name>EIO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

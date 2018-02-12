@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using EIO.XF;
+using Gjallarhorn.XamarinForms;
+using Program = EIO.Program;
 using Foundation;
 using UIKit;
 
@@ -23,7 +25,8 @@ namespace EIO.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            var info = Framework.CreateApplicationInfo(Program.applicationCore, new MainPage());
+            LoadApplication(info.CreateApp());
 
             return base.FinishedLaunching(app, options);
         }
